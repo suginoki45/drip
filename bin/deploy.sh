@@ -28,12 +28,9 @@ tests
 tmp
 .vscode" > .gitignore
 
-git init
-git config user.name "suginoki45"
-git config user.email "yuki.sugitani@glatchdesign.com"
+git clone -b relase --quiet "https://github.com/${TRAVIS_REPO_SLUG}.git" release
+gulp build --env production
+cd release
 git add -A
-git commit --quiet -m "Deploy from travis"
-git clean -fdx
-git rm -fr .gitignore
-git commit --quiet -m "Deploy from travis"
-git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:release > /dev/null 2>&1
+git commit -m "Update from travis $TRAVIS_COMMIT"
+git push --quiet "https://${GH_TOKEN}@${GH_REF}" master:release > /dev/null 2>&1
