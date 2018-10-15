@@ -1,3 +1,6 @@
+/* -----------------------------------------------------------------
+// Form
+----------------------------------------------------------------- */
 .c-form {
   margin-top: 40px;
   margin-bottom: 80px;
@@ -90,10 +93,10 @@ textarea {
   border: 2px solid #e13131;
 }
 .c-form__data--not-valid-alert {
-    display: block;
-    margin-bottom: 2em;
-    padding: 11px 15px;
-    font-weight: normal;
+  display: block;
+  margin-bottom: 2em;
+  padding: 11px 15px;
+  font-weight: normal;
   &.is-error {
     color: #e13131;
     background-color: #ffe7e9;
@@ -106,6 +109,6 @@ textarea {
 }
 .c-form__data--not-valid-tip {
   display: block;
-  margin-top: .4em;
+  margin-top: 0.4em;
   color: #e13131;
 }

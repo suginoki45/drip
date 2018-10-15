@@ -1,10 +1,6 @@
-/*
-#styleguide
-Pager
-
-```
-```
-*/
+/* -----------------------------------------------------------------
+// Pager
+----------------------------------------------------------------- */
 .c-pager {
   display: flex;
   justify-content: space-between;
@@ -14,7 +10,7 @@ Pager
 }
 .c-pager__item {
   font-size: 18px;
-  font-family: 'Cabin', sans-serif;
+  font-family: "Cabin", sans-serif;
   > a {
     padding: 1px 3px;
   }
