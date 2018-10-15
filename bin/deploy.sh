@@ -31,7 +31,7 @@ tmp
 git init
 git config user.name "suginoki45"
 git config user.email "yuki.sugitani@glatchdesign.com"
-git add .
+git add -A
 git commit --quiet -m "Deploy from travis"
 git clean -fdx
 git rm -fr .gitignore
