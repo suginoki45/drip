@@ -33,4 +33,4 @@ gulp build --env production
 cd release
 git add -A
 git commit -m "Update from travis $TRAVIS_COMMIT"
-git push --quiet "https://${GH_TOKEN}@${GH_REF}" master:release > /dev/null 2>&1
+git push --quiet "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" master:release > /dev/null 2>&1
