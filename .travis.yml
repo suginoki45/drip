@@ -9,10 +9,10 @@ install:
   - npm install
 
 before_script:
-  - bash ./bin/build.sh
   - -g gulp-cli
 
 script:
+  - gulp
   - ls -al style.css
 
 after_success: bash ./bin/deploy.sh
