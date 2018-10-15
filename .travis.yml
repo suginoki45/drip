@@ -2,13 +2,15 @@ language: node_js
 
 branches:
   only:
-  - master
+    - master
 
 install:
-- nvm install 8
-- npm install
+  - nvm install 8
+  - npm install
 
-before_script: bash ./bin/build.sh
+before_script:
+  - bash ./bin/build.sh
+  - -g gulp-cli
 
 script:
   - ls -al style.css
