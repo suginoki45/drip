@@ -28,7 +28,7 @@ tests
 tmp
 .vscode" > .gitignore
 
-git clone -b relase --quiet "https://github.com/${TRAVIS_REPO_SLUG}.git" release
+git clone -b release --quiet "https://github.com/${TRAVIS_REPO_SLUG}.git" release
 gulp build --env production
 cd release
 git add -A
