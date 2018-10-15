@@ -6,13 +6,12 @@ branches:
 
 install:
   - nvm install 8
-  - npm install
 
 before_script:
-  - -g gulp-cli
+  - npm install -g gulp-cli
 
 script:
-  - gulp
+  - gulp build --env production
   - ls -al style.css
 
 after_success: bash ./bin/deploy.sh
