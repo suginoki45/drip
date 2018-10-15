@@ -1,0 +1,207 @@
+// ==========================================================================
+// Misson & Vision
+// ==========================================================================
+.p-mission__inner {
+  height: 100%;
+  background: url(/dist/images/company/img_misson_01.jpg) no-repeat center;
+  section {
+    height: 100%;
+    padding: 50px 30px;
+    background-color: rgba(255,255,255,.85);
+    @include mq() {
+      padding: 50px 45px 30px;
+    }
+  }
+  @include mq(sm) {
+    section {
+      width: 427px;
+      margin: 0 auto;
+    }
+    @include mq() {
+      margin: 0 15px;
+      height: 528px;
+      section {
+        height: 528px;
+      }
+    }
+  }
+}
+.p-mission-description {
+  font-size: 15px;
+  text-align: center;
+  br {
+    display: none;
+  }
+  @include mq() {
+    font-size: 17px;
+    br {
+      display: block;
+    }
+  }
+}
+.p-vision {
+  margin-top: 60px;
+  padding-top: 50px;
+  padding-bottom: 65px;
+  background-color: #f8f7f7;
+  [class^="col-"] {
+    + [class^="col-"] {
+      margin-top: 30px;
+    }
+  }
+  @include mq(sm) {
+    margin-top: 80px;
+    [class^="col-"] {
+      + [class^="col-"] {
+        margin-top: 0;
+      }
+    }
+    @include mq() {
+      padding-bottom: 130px;
+    }
+  }
+}
+.p-vision__item {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border: 5px solid #dbd9d9;
+  @include mq(md) {
+    padding: 30px;
+  }
+}
+.p-vision__item__description {
+  font-size: 15px;
+  @include mq() {
+    font-size: 17px;
+  }
+}
+
+// ==========================================================================
+// 会社概要 & アクセス
+// ==========================================================================
+.p-overview {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  @include mq() {
+    margin-top: 0;
+    margin-bottom: 80px;
+  }
+}
+.p-access {
+  margin-bottom: 80px;
+  @include mq() {
+    margin-bottom: 100px;
+  }
+}
+.p-access-map {
+  width: 100%;
+  border: 3px solid #8fcc24;
+  @include mq() {
+    display: table;
+  }
+  + .p-access-map {
+    margin-top: 40px;
+  }
+}
+.p-access-map__info,
+.p-access-map__map {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  @include mq() {
+    display: table-cell;
+    padding-bottom: 34.1%;
+    vertical-align: top;
+  }
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.p-access-map__info {
+  padding: 15px;
+  @include mq() {
+    width: 293px;
+    padding: 20px;
+    border-right: 3px solid #8fcc24;
+  }
+}
+.p-access-map__info__label {
+  margin-bottom: 13px;
+  font-size: 17px;
+  font-weight: bold;
+  @include mq() {
+    margin-bottom: 18px;
+    font-size: 19px;
+  }
+}
+.p-access-map__map {
+  line-height: 0;
+  @include mq() {
+    width: 451px;
+  }
+}
+
+// ==========================================================================
+// 代表・役員紹介
+// ==========================================================================
+.p-ceo-message {
+  margin-top: 40px;
+  @include mq() {
+    margin-top: 0;
+  }
+}
+.p-ceo-message {
+  margin-bottom: 40px;
+  @include mq() {
+    margin-bottom: 80px;
+  }
+}
+.p-staff {
+  margin-bottom: 80px;
+  @include mq() {
+    margin-bottom: 100px;
+  }
+}
+.p-staff-intro {
+  + .p-staff-intro {
+    margin-top: 60px;
+  }
+}
+.p-staff-intro__img {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 6.25% 6.25% 0;
+  background: linear-gradient(to top, #e9e7da 0%, #f5f3e6 100%);
+  border-top: 4px solid #92e147;
+  text-align: center;
+  img {
+    line-height: 1;
+  }
+  @include mq() {
+    height: 284px;
+    padding: 0;
+  }
+}
+.p-staff__name {
+  margin-bottom: 25px;
+  color: #000;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.3;
+  > span {
+    display: block;
+    color: #333;
+    font-size: 14px;
+    font-weight: normal;
+  }
+}

@@ -1,0 +1,60 @@
+// ==========================================================================
+// Hero
+// ==========================================================================
+.p-hero {
+  position: relative;
+  width: 100%;
+  padding: 15% 0;
+  &__large-text {
+    position: relative;
+    z-index: 100;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.1;
+    @include mq() {
+      font-size: 4rem;
+    }
+  }
+  &__small-text {
+    position: relative;
+    z-index: 100;
+    margin-top: 5px;
+    color: #fff;
+    text-align: center;
+  }
+  > img {
+    width: 100%;
+  }
+  &__inner {
+    position: relative;
+    width: 100%;
+    height: 329px;
+    @include mq() {
+      height: 100%;
+    }
+  }
+}
+.c-hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: url(/wp-content/themes/drip/resources/dist/img/img_default-thumb01.jpg)
+    no-repeat 0 0;
+  background-size: cover;
+  background-position: center center;
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: block;
+    content: "";
+  }
+}

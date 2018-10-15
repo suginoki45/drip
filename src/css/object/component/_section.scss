@@ -1,0 +1,92 @@
+// ==========================================================================
+//  Section
+// ==========================================================================
+.c-section {
+  position: relative;
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+  &--half-panel {
+    &--image-left {
+      [class^="col"]:nth-of-type(1) {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+    &--image-right {
+      [class^="col"]:nth-of-type(2) {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+  }
+  &__desc {
+    font-size: 15px;
+    text-align: center;
+    br {
+      display: none;
+    }
+    @include mq() {
+      font-size: 17px;
+      br {
+        display: block;
+      }
+    }
+  }
+}
+
+// feature.
+.c-section-feature {
+  text-align: center;
+  &__heading {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  &__icon-default {
+    color: #fff;
+  }
+  [class*="col"] {
+    + [class*="col"] {
+      margin-top: 30px;
+      @include mq(sm) {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+// with bg-image.
+.c-section-bg-image {
+  * {
+    color: #fff;
+    border-color: #fff;
+  }
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: url(/wp-content/themes/drip/dist/img/img_default-thumb02.jpg);
+    background-size: cover;
+    background-position: center center;
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(20, 150, 320, 0.7);
+      display: block;
+      content: "";
+    }
+  }
+  .c-heading {
+    > span {
+      color: #fff;
+    }
+  }
+  .c-section__desc {
+    color: #fff;
+  }
+}

@@ -1,0 +1,56 @@
+// ==========================================================================
+// Comment
+// ==========================================================================
+.comment {
+  &-body {
+    margin-bottom: var(--space-sm);
+  }
+}
+.c-comments {
+  &__pager {
+    margin: var(--space-sm) 0;
+  }
+  &__block {
+    &.depth-1 {
+      padding: var(--space-sm) 0;
+      border-bottom: 1px solid #ddd;
+    }
+    &[class*="depth-"]:not(.depth-1) {
+      margin-bottom: var(--space-sm);
+    }
+  }
+  &__item {
+    position: relative;
+    + .children {
+      margin-top: var(--space-md);
+      @include mq(md) {
+        margin: var(--space-md) 0 0 var(--space-md);
+      }
+    }
+  }
+  &__header {
+    margin-right: var(--space-sm);
+  }
+  &__author {
+    float: left;
+    margin-right: 10px;
+    img {
+      border-radius: 50%;
+      .children & {
+        width: 45px;
+        height: 45px;
+      }
+    }
+  }
+  &__body {
+    padding-right: var(--space-md);
+    &:first-of-type {
+      overflow: hidden;
+    }
+  }
+  &__action {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}

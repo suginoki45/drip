@@ -1,0 +1,24 @@
+// ==========================================================================
+// Site-Branding
+// ==========================================================================
+.c-site-branding {
+  font-size: 2.5rem;
+  .l-1row-header & {
+  }
+  .l-2row-header & {
+    margin: var(--space-sm) 0;
+  }
+  a {
+    color: #333;
+  }
+  &__title {
+    position: relative;
+    z-index: 10000;
+    .l-2row-header & {
+      text-align: center;
+    }
+    @include mq() {
+      vertical-align: middle;
+    }
+  }
+}

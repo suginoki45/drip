@@ -1,0 +1,17 @@
+@for $i from 0 through 100 {
+  .mgb#{$i * 5} {
+    margin-bottom:#{$i * 5}px;
+  }
+  .pdb#{$i * 5} {
+    padding-bottom:#{$i * 5}px;
+  }
+}
+
+@for $i from 0 through 100 {
+  .mgr#{$i * 5} {
+    margin-right:#{$i * 5}px;
+  }
+  .pdbr#{$i * 5} {
+    padding-right:#{$i * 5}px;
+  }
+}
