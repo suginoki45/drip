@@ -4,6 +4,10 @@ branches:
   only:
   - master
 
+install:
+- nvm install 8
+- npm install
+
 before_script: bash ./bin/build.sh
 
 script:
