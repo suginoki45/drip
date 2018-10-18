@@ -12,12 +12,25 @@ if [[ "master" != "$TRAVIS_BRANCH" ]]; then
 	exit
 fi
 
-git clone -b release --quiet "https://github.com/${TRAVIS_REPO_SLUG}.git" release
+rm -rf .git
+rm -r .gitignore
 
-npm run build
+echo ".editorconfig
+.travis.yml
+README.md
+bin
+gulpfile.js
+node_modules
+package.json
+phpcs.ruleset.xml
+src
+tests
+tmp
+.vscode" > .gitignore
 
-cd release
-
-git add -A
+git init
+git config user.name "suginoki45"
+git config user.email "yuki.sugitani@glatchdesign.com"
+git add .
 git commit -m "Update from travis $TRAVIS_COMMIT"
-git push --quiet "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" release 2> /dev/null
+git push --force --quiet "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" release > /dev/null 2>&1
