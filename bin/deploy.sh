@@ -33,4 +33,4 @@ git config user.name "suginoki45"
 git config user.email "yuki.sugitani@glatchdesign.com"
 git add .
 git commit -m "Update from travis $TRAVIS_COMMIT"
-git push --force --quiet "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" release > /dev/null 2>&1
+git push --force --quiet "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" master:release > /dev/null 2>&1
