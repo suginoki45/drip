@@ -1,26 +1,19 @@
 language: php
-
 php:
-  - "7"
-
+- '7'
 branches:
   only:
-    - master
-
+  - master
 cache:
- directories:
+  directories:
   - node_modules
-
 install:
-  - nvm install 8
-
+- nvm install 8
 before_script:
-  - npm install
-
+- npm install
 script:
-  - npm run build
-  - ls -la style.css
-
+- npm run build
+- ls -la style.css
 deploy:
   provider: script
   script: bash ./bin/deploy.sh
@@ -28,11 +21,10 @@ deploy:
   on:
     branch: master
     php: 7
-
 env:
   global:
   - GIT_COMMITTER_NAME=suginoki45
   - GIT_COMMITTER_EMAIL=yuki.sugitani@glatchdesign.com
   - GIT_AUTHOR_NAME=suginoki45
   - GIT_AUTHOR_EMAIL=yuki.sugitani@glatchdesign.com
-  - secure: "R7kyNeMeB+fV6ETm7GB2CDb1gDvgrTnb8mudiD76GRRiU9uSvHUMoVdTKbhiY+x8vd4SdhlsGJxUg+nqT4SuQ8Ju4w4O5HkrKHgfsE+7al1wV/LOKLGq7NGDMAhIOzhkQwm+C9jF8aP4W27WqDZ4e2GkWIoaEDFZaUw9w7aIguH1gBU8ogGfFbziPuJHGbeFIUI1SMJ2dhqjCAFQK05566MV1GrJEboUZESFfR7gWnHJhtkkdnmaL3gCwYoApbXSTryzA6RJRDvqNxUQZMPI3XjBU4geQMfKwjzPn2ddvbPP4n0p0Fo22g51RdB/AgrXN6FON32j95B077isq0tvMOEEWyl8BJRY/QKMb0wlwiR5lZ0dhTZKY2c+6hbK+p+ECOk24Ac3bmi0UnSrTPZgBCRGWWjL1qJJGbwLQxL1i504WHtwOYJVCdS8LWnrmGGi8P0GivmJd/LrqwDsHrPNRSK2gHJDOSyFQBIgrVATG/Z+f4zaDjh2A1Re14gaTNJZ9zoR6ZNdibaWm0eqYrZWSaD0OVO9yvaIF+a8pCDbWZxLw+c3gTrUkgctu3CMwqBFWBmdx+Sb7FN19Ev+/HElw6hbkVc+iOOoc4HSunBerLLkIH65IxHZ186N9K+nVaUShk9ub55k3Xf1y/DJ0B1VZVh60TPuRPWEi9E2ZFCuGfo="
+  - secure: oxK1ST7TDuK0x3BxZJVsuoYComdsFWaEd0SBXAX5foJhHQHCC/ntc2c4TXpNuEI8rPrhy1byhGqwVl0V59/S2PVySfrWYVcERySq5vh/siQinr3WuLuK9k4ML2X//J/03QZ16LIAm4aIsFGdNY1NL3GIDzgKrhd7rM9M2TsgA7a34FrkG0BljEKzwuAMIQrtVb7JbOU2PNXodpHOVSQlBfT5ux6qfduKisOz65k9GxTWzRykwQrrI3+vcu1u97ZFOscotGMHPQZsZJbHw7LXVmdgGd2JX/BSbl97Si0+bkE9D/kjXxKtskhd/HDO481Bicn2WTVHicIcJzOvH2xxCYG04/WtEuavRBi6BEDQdUhbc9sbkdwjJHz+4kV+pc+ZM+HGk3R7KMvOtPX6tYxvd7djIYICdefbO85sT06FSVE5Zb3EKY8Vd+WFBztHztpMdFmqQZ5GrN9Pa6muFWy3V9rpR4aYd4YZw/xrmBhmuphqmbduU7jraOw0NGhmPmkt9yHMYoZrXxDxwoCJUEO7u40asfYWvyxQ5YZR/wAcwqWPqO+U9NGIUH5fkPmnG8b9IXsds63ZQpR9RyI4K1jLDVDKjNw+95+WIoMfxF4VYvEPp/TpqcV44nHUj/NxiefqLl2pQeO2xGeDHqngieLkg2BoFp7RQW0ktqCI+1ygzug=
