@@ -15,7 +15,7 @@ before_script:
   - npm install -g gulp-cli
 
 script:
-  - gulp build --env production
+  - npm run build
   - ls -al style.css
 
 after_success: bash ./bin/deploy.sh

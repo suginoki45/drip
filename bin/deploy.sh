@@ -14,7 +14,7 @@ fi
 
 git clone -b release --quiet "https://github.com/${TRAVIS_REPO_SLUG}.git" release
 
-gulp build --env production
+npm run build
 
 cd release
 
