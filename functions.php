@@ -135,4 +135,4 @@ foreach ( $includes as $include ) {
 /**
  *  Theme definitions.
  */
-define( 'DRIP_VER', '0.0.1' );
+define( 'DRIP_VER', '0.0.0' );

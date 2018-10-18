@@ -15,13 +15,14 @@ fi
 rm -rf .git
 rm -r .gitignore
 
-echo ".editorconfig
+echo ".eslintrc
 .travis.yml
 README.md
 bin
 gulpfile.js
 node_modules
 package.json
+package-lock.json
 phpcs.ruleset.xml
 src
 tests
