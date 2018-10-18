@@ -17,7 +17,13 @@ script:
   - npm run build
   - ls -la style.css
 
-after_success: bash ./bin/deploy.sh
+deploy:
+  provider: script
+  script: bin/deploy.sh
+  skip_cleanup: true
+  on:
+    branch: master
+    php: 7
 
 env:
   global:
