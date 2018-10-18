@@ -7,6 +7,10 @@ branches:
   only:
     - master
 
+cache:
+ directories:
+  - node_modules
+
 install:
   - nvm install 8
 
@@ -19,7 +23,7 @@ script:
 
 deploy:
   provider: script
-  script: bin/deploy.sh
+  script: bash ./bin/deploy.sh
   skip_cleanup: true
   on:
     branch: master
