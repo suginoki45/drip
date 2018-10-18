@@ -12,24 +12,7 @@ if [[ "master" != "$TRAVIS_BRANCH" ]]; then
 	exit
 fi
 
-rm -rf .git
-rm -r .gitignore
-
-echo ".editorconfig
-.travis.yml
-README.md
-bin
-gulpfile.js
-node_modules
-package.json
-phpcs.ruleset.xml
-src
-tests
-tmp
-.vscode" > .gitignore
-
 git clone -b release --quiet "https://github.com/${TRAVIS_REPO_SLUG}.git" release
-gulp build --env production
 cd release
 git add -A
 git commit -m "Update from travis $TRAVIS_COMMIT"
