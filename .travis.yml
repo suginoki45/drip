@@ -8,12 +8,14 @@ cache:
   directories:
   - node_modules
 install:
-- nvm install 8
+  - nvm install 8
 before_script:
-- npm install
+  - npm install
+  - composer install
 script:
-- npm run build
-- ls -la style.css
+  - npm run build
+  - ls -la style.css
+  - composer test
 deploy:
   provider: script
   script: bash ./bin/deploy.sh
