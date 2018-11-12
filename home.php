@@ -22,18 +22,18 @@ get_header();
 								<?php
 								while ( have_posts() ) :
 									the_post();
-									$cat      = get_the_category();
-									$cat_id   = $cat[0]->cat_ID;
-									$cat_name = $cat[0]->name;
-									$cat_slug = $cat[0]->category_nicename;
-									$cat_link = get_category_link( $cat_id );
+									$category      = get_the_category();
+									$category_id   = $category[0]->cat_ID;
+									$category_name = $category[0]->name;
+									$category_slug = $category[0]->category_nicename;
+									$category_link = get_category_link( $category_id );
 									?>
 									<div <?php post_class( 'col-md-4 c-entry__items' ); ?>>
 										<div class="c-entry__header">
 											<header>
 												<p class="c-entry__header__term">
-													<a href="<?php echo esc_html( $cat_link ); ?>">
-														<?php echo esc_html( $cat_name ); ?>
+													<a href="<?php echo esc_html( $category_link ); ?>">
+														<?php echo esc_html( $category_name ); ?>
 													</a>
 												</p>
 												<h1 class="c-entry__header__title">
