@@ -15,7 +15,6 @@
  * @since        1.0.0
  */
 function drip_the_comments( $comment, $args, $depth ) {
-	$GLOBALS['comment'] = $comment;
 	?>
 	<li id="li-comment-<?php comment_ID(); ?>" <?php comment_class( array( 'c-comments__block' ) ); ?>>
 		<dl id="comment-<?php comment_ID(); ?>" class="c-comments__item">
