@@ -65,35 +65,37 @@ get_header();
 		</h2>
 			<div class="row c-entries">
 				<?php
-				$args = array(
-					'posts_per_page' => get_theme_mod( 'posts_number' ),
-					'post_type'      => 'post',
-					'post_status'    => 'publish',
+				$my_query = new WP_Query(
+					array(
+						'posts_per_page' => get_theme_mod( 'posts_number' ),
+						'post_type'      => 'post',
+						'post_status'    => 'publish',
+					)
 				);
-				$my_posts = get_posts( $args );
-				foreach ( get_posts( $args ) as $post ) :
-					setup_postdata( $post );
-					?>
-					<div class="col-6 col-md-<?php echo esc_html( get_theme_mod( 'posts_column_number', '3' ) ); ?> c-entries__item">
-						<article <?php post_class(); ?>>
-							<a href="<?php the_permalink(); ?>">
-								<img class="c-entries__item__thumb" src="<?php echo esc_html( get_template_directory_uri() ); ?>/dist/img/img_default-thumb01.jpg"	alt="">
-								<div class="c-entries__item__body">
-									<div class="c-entries__item__info">
-										<p class="c-entries__item__info__date">
-											<?php echo get_the_date( 'Y. m. d' ); ?>
-										</p>
+				if ( $my_query->have_posts() ) :
+					while ( $my_query->have_posts() ) :
+						$my_query->the_post();
+						?>
+						<div class="col-6 col-md-<?php echo esc_html( get_theme_mod( 'posts_column_number', '3' ) ); ?> c-entries__item">
+							<article <?php post_class(); ?>>
+								<a href="<?php the_permalink(); ?>">
+									<img class="c-entries__item__thumb" src="<?php echo esc_html( get_template_directory_uri() ); ?>/dist/img/img_default-thumb01.jpg"	alt="">
+									<div class="c-entries__item__body">
+										<div class="c-entries__item__info">
+											<p class="c-entries__item__info__date">
+												<?php echo get_the_date( 'Y. m. d' ); ?>
+											</p>
+										</div>
+										<h2 class="c-entries__item__body__title">
+											<?php the_title(); ?>
+										</h2>
 									</div>
-									<h2 class="c-entries__item__body__title">
-										<?php the_title(); ?>
-									</h2>
-								</div>
-							</a>
-						</article>
-					</div>
-					<?php
-				endforeach;
-				wp_reset_postdata();
+								</a>
+							</article>
+						</div>
+						<?php
+					endwhile;
+				endif;
 				?>
 			</div>
 		<?php if ( ! empty( get_theme_mod( 'posts_button' ) ) ) : ?>
