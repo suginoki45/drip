@@ -48,7 +48,8 @@ if ( ! function_exists( 'drip_setup' ) ) {
 		 * Support custom-logo.
 		 */
 		add_theme_support(
-			'custom-logo', array(
+			'custom-logo',
+			array(
 				'height'      => 160,
 				'width'       => 320,
 				'flex-height' => true,
@@ -66,7 +67,8 @@ if ( ! function_exists( 'drip_setup' ) ) {
 		 * to output valid HTML5.
 		 */
 		add_theme_support(
-			'html5', array(
+			'html5',
+			array(
 				'search-form',
 				'comment-form',
 				'comment-list',

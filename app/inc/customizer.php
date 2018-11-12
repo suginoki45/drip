@@ -25,7 +25,8 @@ function drip_customize_register( $wp_customize ) {
 	 * ---------------------------------
 	 */
 	$wp_customize->add_panel(
-		'global_setting', array(
+		'global_setting',
+		array(
 			'title'    => 'Global Settings',
 			'priority' => 130,
 		)
@@ -49,7 +50,9 @@ function drip_customize_register( $wp_customize ) {
 	);
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize, 'sidebar_position', array(
+			$wp_customize,
+			'sidebar_position',
+			array(
 				'label'    => __( 'Sidebar Position', 'drip' ),
 				'section'  => 'setting_sidebar',
 				'priority' => 1,
@@ -69,7 +72,8 @@ function drip_customize_register( $wp_customize ) {
 	 * ---------------------------------
 	 */
 	$wp_customize->add_panel(
-		'header_setting', array(
+		'header_setting',
+		array(
 			'title'    => 'Header Settings',
 			'priority' => 130,
 		)
@@ -77,21 +81,25 @@ function drip_customize_register( $wp_customize ) {
 
 	// Header > layout.
 	$wp_customize->add_section(
-		'header_setting_layout', array(
+		'header_setting_layout',
+		array(
 			'title'    => __( 'Header layout', 'drip' ),
 			'priority' => 1,
 			'panel'    => 'header_setting',
 		)
 	);
 	$wp_customize->add_setting(
-		'header_layout', array(
+		'header_layout',
+		array(
 			'default'           => '1row',
 			'sanitize_callback' => 'drip_sanitize_radio',
 		)
 	);
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize, 'header_layout', array(
+			$wp_customize,
+			'header_layout',
+			array(
 				'label'       => __( 'Header layout', 'drip' ),
 				'description' => __( 'Please choose your preferred header layout.', 'drip' ),
 				'section'     => 'header_setting_layout',
@@ -109,7 +117,8 @@ function drip_customize_register( $wp_customize ) {
 	 * Hero Section
 	 */
 	$wp_customize->add_panel(
-		'hero_setting', array(
+		'hero_setting',
+		array(
 			'title'    => 'Section: Hero Setting',
 			'priority' => 130,
 		)
@@ -117,21 +126,25 @@ function drip_customize_register( $wp_customize ) {
 
 	// Hero > general section.
 	$wp_customize->add_section(
-		'hero_setting_general', array(
+		'hero_setting_general',
+		array(
 			'title'    => __( 'General', 'drip' ),
 			'priority' => 1,
 			'panel'    => 'hero_setting',
 		)
 	);
 	$wp_customize->add_setting(
-		'hero_display', array(
+		'hero_display',
+		array(
 			'default'           => false,
 			'sanitize_callback' => 'drip_sanitize_checkbox',
 		)
 	);
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize, 'hero_display', array(
+			$wp_customize,
+			'hero_display',
+			array(
 				'label'       => __( 'Hide section', 'drip' ),
 				'description' => __( 'If checked the hero section will be hidden.', 'drip' ),
 				'section'     => 'hero_setting_general',
@@ -143,21 +156,25 @@ function drip_customize_register( $wp_customize ) {
 
 	// Hero > text section.
 	$wp_customize->add_section(
-		'hero_setting_text', array(
+		'hero_setting_text',
+		array(
 			'title'    => __( 'Text', 'drip' ),
 			'priority' => 1,
 			'panel'    => 'hero_setting',
 		)
 	);
 	$wp_customize->add_setting(
-		'hero_copy', array(
+		'hero_copy',
+		array(
 			'default'           => 'Drip',
 			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize, 'hero_copy', array(
+			$wp_customize,
+			'hero_copy',
+			array(
 				'label'       => __( 'Hero copy', 'drip' ),
 				'description' => __( 'Please enter copy texts for Hero section.', 'drip' ),
 				'section'     => 'hero_setting_text',
@@ -167,14 +184,17 @@ function drip_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'hero_tagline', array(
+		'hero_tagline',
+		array(
 			'default'           => 'Drop is a simple WordPress theme that makes customization easy.',
 			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize, 'hero_tagline', array(
+			$wp_customize,
+			'hero_tagline',
+			array(
 				'label'       => __( 'Hero tagline', 'drip' ),
 				'description' => __( 'Please enter tagline texts for Hero section.', 'drip' ),
 				'section'     => 'hero_setting_text',
@@ -188,28 +208,33 @@ function drip_customize_register( $wp_customize ) {
 	 * Feature Section
 	 */
 	$wp_customize->add_panel(
-		'feature_setting', array(
+		'feature_setting',
+		array(
 			'title'    => 'Section: Feature Setting',
 			'priority' => 140,
 		)
 	);
 
 	$wp_customize->add_section(
-		'section_feature_general', array(
+		'section_feature_general',
+		array(
 			'title'    => __( 'General', 'drip' ),
 			'priority' => 1,
 			'panel'    => 'feature_setting',
 		)
 	);
 	$wp_customize->add_setting(
-		'feature_display', array(
+		'feature_display',
+		array(
 			'default'           => false,
 			'sanitize_callback' => 'drip_sanitize_checkbox',
 		)
 	);
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize, 'feature_display', array(
+			$wp_customize,
+			'feature_display',
+			array(
 				'label'       => __( 'Hide feature', 'drip' ),
 				'description' => __( 'If checked the feature section will be hidden.', 'drip' ),
 				'section'     => 'section_feature_general',
@@ -221,21 +246,25 @@ function drip_customize_register( $wp_customize ) {
 
 	// feature > heading section.
 	$wp_customize->add_section(
-		'section_feature_heading', array(
+		'section_feature_heading',
+		array(
 			'title'    => __( 'Heading', 'drip' ),
 			'priority' => 1,
 			'panel'    => 'feature_setting',
 		)
 	);
 	$wp_customize->add_setting(
-		'feature_heading', array(
+		'feature_heading',
+		array(
 			'default'           => 'Feature',
 			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize, 'feature_heading', array(
+			$wp_customize,
+			'feature_heading',
+			array(
 				'label'       => __( 'Feature heading', 'drip' ),
 				'description' => __( 'Please enter heading texts for feature section.', 'drip' ),
 				'section'     => 'section_feature_heading',
@@ -247,21 +276,25 @@ function drip_customize_register( $wp_customize ) {
 
 	// feature > icon1 section.
 	$wp_customize->add_section(
-		'section_feature_icon1', array(
+		'section_feature_icon1',
+		array(
 			'title'    => __( 'Icon1', 'drip' ),
 			'priority' => 1,
 			'panel'    => 'feature_setting',
 		)
 	);
 	$wp_customize->add_setting(
-		'feature_icon1', array(
+		'feature_icon1',
+		array(
 			'default'           => 'palette',
 			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize, 'feature_icon1', array(
+			$wp_customize,
+			'feature_icon1',
+			array(
 				'label'       => __( 'Please select the icon', 'drip' ),
 				'description' => __( 'Please select the icon you want to display from <a href="https://fontawesome.com/icons?d=gallery&m=free" target="_blank">Font Awesome</a>.', 'drip' ),
 				'section'     => 'section_feature_icon1',
@@ -271,14 +304,17 @@ function drip_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'feature_text1', array(
+		'feature_text1',
+		array(
 			'default'           => 'Simple and sophisticated design',
 			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize, 'feature_text1', array(
+			$wp_customize,
+			'feature_text1',
+			array(
 				'label'       => __( 'Posts select the icon', 'drip' ),
 				'description' => __( 'Please enter text for feature section.', 'drip' ),
 				'section'     => 'section_feature_icon1',
@@ -290,21 +326,25 @@ function drip_customize_register( $wp_customize ) {
 
 	// feature > icon2 section.
 	$wp_customize->add_section(
-		'section_feature_icon2', array(
+		'section_feature_icon2',
+		array(
 			'title'    => __( 'Icon2', 'drip' ),
 			'priority' => 1,
 			'panel'    => 'feature_setting',
 		)
 	);
 	$wp_customize->add_setting(
-		'feature_icon2', array(
+		'feature_icon2',
+		array(
 			'default'           => 'mobile-alt',
 			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize, 'feature_icon2', array(
+			$wp_customize,
+			'feature_icon2',
+			array(
 				'label'       => __( 'Please select the icon', 'drip' ),
 				'description' => __( 'Please select the icon you want to display from <a href="https://fontawesome.com/icons?d=gallery&m=free" target="_blank">Font Awesome</a>.', 'drip' ),
 				'section'     => 'section_feature_icon2',
@@ -314,14 +354,17 @@ function drip_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'feature_text2', array(
+		'feature_text2',
+		array(
 			'default'           => 'Smartphone compatible',
 			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize, 'feature_text2', array(
+			$wp_customize,
+			'feature_text2',
+			array(
 				'label'       => __( 'Posts select the icon', 'drip' ),
 				'description' => __( 'Please enter text for feature section.', 'drip' ),
 				'section'     => 'section_feature_icon2',
@@ -333,21 +376,25 @@ function drip_customize_register( $wp_customize ) {
 
 	// feature > icon3 section.
 	$wp_customize->add_section(
-		'section_feature_icon3', array(
+		'section_feature_icon3',
+		array(
 			'title'    => __( 'Icon3', 'drip' ),
 			'priority' => 1,
 			'panel'    => 'feature_setting',
 		)
 	);
 	$wp_customize->add_setting(
-		'feature_icon3', array(
+		'feature_icon3',
+		array(
 			'default'           => 'laptop',
 			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize, 'feature_icon3', array(
+			$wp_customize,
+			'feature_icon3',
+			array(
 				'label'       => __( 'Please select the icon', 'drip' ),
 				'description' => __( 'Please select the icon you want to display from <a href="https://fontawesome.com/icons?d=gallery&m=free" target="_blank">Font Awesome</a>.', 'drip' ),
 				'section'     => 'section_feature_icon3',
@@ -357,14 +404,17 @@ function drip_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'feature_text3', array(
+		'feature_text3',
+		array(
 			'default'           => 'Easy customization',
 			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize, 'feature_text3', array(
+			$wp_customize,
+			'feature_text3',
+			array(
 				'label'       => __( 'Posts select the icon', 'drip' ),
 				'description' => __( 'Please enter text for feature section.', 'drip' ),
 				'section'     => 'section_feature_icon3',
@@ -378,7 +428,8 @@ function drip_customize_register( $wp_customize ) {
 	 * Posts Section
 	 */
 	$wp_customize->add_panel(
-		'posts_setting', array(
+		'posts_setting',
+		array(
 			'title'    => 'Section: Posts Setting',
 			'priority' => 150,
 		)
@@ -386,21 +437,25 @@ function drip_customize_register( $wp_customize ) {
 
 	// Posts > general section.
 	$wp_customize->add_section(
-		'posts_setting_general', array(
+		'posts_setting_general',
+		array(
 			'title'    => __( 'General', 'drip' ),
 			'priority' => 1,
 			'panel'    => 'posts_setting',
 		)
 	);
 	$wp_customize->add_setting(
-		'posts_display', array(
+		'posts_display',
+		array(
 			'default'           => false,
 			'sanitize_callback' => 'drip_sanitize_checkbox',
 		)
 	);
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize, 'posts_display', array(
+			$wp_customize,
+			'posts_display',
+			array(
 				'label'       => __( 'Hide posts', 'drip' ),
 				'description' => __( 'If checked the posts section will be hidden.', 'drip' ),
 				'section'     => 'posts_setting_general',
@@ -410,14 +465,17 @@ function drip_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'posts_background_color', array(
+		'posts_background_color',
+		array(
 			'default'           => '#f3f3f3',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
-			$wp_customize, 'posts_background_color', array(
+			$wp_customize,
+			'posts_background_color',
+			array(
 				'label'       => __( 'Select blackground color', 'drip' ),
 				'description' => __( 'If checked the contact section will be hidden.', 'drip' ),
 				'section'     => 'posts_setting_general',
@@ -428,21 +486,25 @@ function drip_customize_register( $wp_customize ) {
 
 	// Posts > heading section.
 	$wp_customize->add_section(
-		'posts_setting_heading', array(
+		'posts_setting_heading',
+		array(
 			'title'    => __( 'Heading', 'drip' ),
 			'priority' => 1,
 			'panel'    => 'posts_setting',
 		)
 	);
 	$wp_customize->add_setting(
-		'posts_heading', array(
+		'posts_heading',
+		array(
 			'default'           => 'Posts',
 			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize, 'posts_heading', array(
+			$wp_customize,
+			'posts_heading',
+			array(
 				'label'       => __( 'Posts heading', 'drip' ),
 				'description' => __( 'Please enter heading texts for posts section.', 'drip' ),
 				'section'     => 'posts_setting_heading',
@@ -454,21 +516,25 @@ function drip_customize_register( $wp_customize ) {
 
 	// Posts > column section.
 	$wp_customize->add_section(
-		'posts_setting_column', array(
+		'posts_setting_column',
+		array(
 			'title'    => __( 'Column', 'drip' ),
 			'priority' => 1,
 			'panel'    => 'posts_setting',
 		)
 	);
 	$wp_customize->add_setting(
-		'posts_number', array(
+		'posts_number',
+		array(
 			'default'           => '4',
 			'sanitize_callback' => 'absint',
 		)
 	);
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize, 'posts_number', array(
+			$wp_customize,
+			'posts_number',
+			array(
 				'label'       => __( 'Number of posts to display', 'drip' ),
 				'description' => __( 'Please choose the number of posts to display.', 'drip' ),
 				'section'     => 'posts_setting_column',
@@ -488,14 +554,17 @@ function drip_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'posts_column_number', array(
+		'posts_column_number',
+		array(
 			'default'           => '4',
 			'sanitize_callback' => 'absint',
 		)
 	);
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize, 'posts_column_number', array(
+			$wp_customize,
+			'posts_column_number',
+			array(
 				'label'       => __( 'Number of post columns', 'drip' ),
 				'description' => __( 'Please select the number of post columns to display.', 'drip' ),
 				'section'     => 'posts_setting_column',
@@ -513,21 +582,25 @@ function drip_customize_register( $wp_customize ) {
 
 	// Posts > button section.
 	$wp_customize->add_section(
-		'posts_setting_button', array(
+		'posts_setting_button',
+		array(
 			'title'    => __( 'Button', 'drip' ),
 			'priority' => 1,
 			'panel'    => 'posts_setting',
 		)
 	);
 	$wp_customize->add_setting(
-		'posts_button', array(
+		'posts_button',
+		array(
 			'default'           => '/blog',
 			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize, 'posts_button', array(
+			$wp_customize,
+			'posts_button',
+			array(
 				'label'       => __( 'Posts button URL', 'drip' ),
 				'description' => __( 'Please enter the URL to set for the button.', 'drip' ),
 				'section'     => 'posts_setting_button',
@@ -537,14 +610,17 @@ function drip_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'posts_button-text', array(
+		'posts_button-text',
+		array(
 			'default'           => 'More',
 			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize, 'posts_button-text', array(
+			$wp_customize,
+			'posts_button-text',
+			array(
 				'label'       => __( 'Posts button text', 'drip' ),
 				'description' => __( 'Please enter the text to set for the button.', 'drip' ),
 				'section'     => 'posts_setting_button',
@@ -558,7 +634,8 @@ function drip_customize_register( $wp_customize ) {
 	 * Recruit Section
 	 */
 	$wp_customize->add_panel(
-		'recruit_setting', array(
+		'recruit_setting',
+		array(
 			'title'    => 'Section: Recruit Setting',
 			'priority' => 160,
 		)
@@ -566,21 +643,25 @@ function drip_customize_register( $wp_customize ) {
 
 	// Recruit > general section.
 	$wp_customize->add_section(
-		'recruit_setting_general', array(
+		'recruit_setting_general',
+		array(
 			'title'    => __( 'General', 'drip' ),
 			'priority' => 1,
 			'panel'    => 'recruit_setting',
 		)
 	);
 	$wp_customize->add_setting(
-		'recruit_display', array(
+		'recruit_display',
+		array(
 			'default'           => false,
 			'sanitize_callback' => 'drip_sanitize_checkbox',
 		)
 	);
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize, 'recruit_display', array(
+			$wp_customize,
+			'recruit_display',
+			array(
 				'label'       => __( 'Hide section', 'drip' ),
 				'description' => __( 'If checked the recruit section will be hidden.', 'drip' ),
 				'section'     => 'recruit_setting_general',
@@ -592,21 +673,25 @@ function drip_customize_register( $wp_customize ) {
 
 	// Recruit > heading section.
 	$wp_customize->add_section(
-		'recruit_setting_heading', array(
+		'recruit_setting_heading',
+		array(
 			'title'    => __( 'Heading', 'drip' ),
 			'priority' => 1,
 			'panel'    => 'recruit_setting',
 		)
 	);
 	$wp_customize->add_setting(
-		'recruit_heading', array(
+		'recruit_heading',
+		array(
 			'default'           => 'Recruit',
 			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize, 'recruit_heading', array(
+			$wp_customize,
+			'recruit_heading',
+			array(
 				'label'       => __( 'Posts heading', 'drip' ),
 				'description' => __( 'Please enter heading texts for recruit section.', 'drip' ),
 				'section'     => 'recruit_setting_heading',
@@ -618,21 +703,25 @@ function drip_customize_register( $wp_customize ) {
 
 	// Recruit > text section.
 	$wp_customize->add_section(
-		'recruit_setting_text', array(
+		'recruit_setting_text',
+		array(
 			'title'    => __( 'Text', 'drip' ),
 			'priority' => 1,
 			'panel'    => 'recruit_setting',
 		)
 	);
 	$wp_customize->add_setting(
-		'recruit_text', array(
+		'recruit_text',
+		array(
 			'default'           => 'We are currently looking for someone to work with us at our company.',
 			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize, 'recruit_text', array(
+			$wp_customize,
+			'recruit_text',
+			array(
 				'label'       => __( 'Recruit copy', 'drip' ),
 				'description' => __( 'Please enter the URL to set for the button.', 'drip' ),
 				'section'     => 'recruit_setting_text',
@@ -644,21 +733,25 @@ function drip_customize_register( $wp_customize ) {
 
 	// Recruit > button section.
 	$wp_customize->add_section(
-		'recruit_setting_button', array(
+		'recruit_setting_button',
+		array(
 			'title'    => __( 'Button', 'drip' ),
 			'priority' => 1,
 			'panel'    => 'recruit_setting',
 		)
 	);
 	$wp_customize->add_setting(
-		'recruit_button', array(
+		'recruit_button',
+		array(
 			'default'           => '/recruit',
 			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize, 'recruit_button', array(
+			$wp_customize,
+			'recruit_button',
+			array(
 				'label'       => __( 'Posts button URL', 'drip' ),
 				'description' => __( 'Please enter the URL to set for the button.', 'drip' ),
 				'section'     => 'recruit_setting_button',
@@ -668,14 +761,17 @@ function drip_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'recruit_button-text', array(
+		'recruit_button-text',
+		array(
 			'default'           => 'More',
 			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize, 'recruit_button-text', array(
+			$wp_customize,
+			'recruit_button-text',
+			array(
 				'label'       => __( 'Posts button text', 'drip' ),
 				'description' => __( 'Please enter the text to set for the button.', 'drip' ),
 				'section'     => 'recruit_setting_button',
@@ -689,7 +785,8 @@ function drip_customize_register( $wp_customize ) {
 	 * Original Section
 	 */
 	$wp_customize->add_panel(
-		'original1_setting', array(
+		'original1_setting',
+		array(
 			'title'    => 'Section: Original Setting',
 			'priority' => 160,
 		)
@@ -697,21 +794,25 @@ function drip_customize_register( $wp_customize ) {
 
 	// Original > general section.
 	$wp_customize->add_section(
-		'original1_setting_general', array(
+		'original1_setting_general',
+		array(
 			'title'    => __( 'General', 'drip' ),
 			'priority' => 1,
 			'panel'    => 'original1_setting',
 		)
 	);
 	$wp_customize->add_setting(
-		'original1_display', array(
+		'original1_display',
+		array(
 			'default'           => false,
 			'sanitize_callback' => 'drip_sanitize_checkbox',
 		)
 	);
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize, 'original1_display', array(
+			$wp_customize,
+			'original1_display',
+			array(
 				'label'       => __( 'Hide section', 'drip' ),
 				'description' => __( 'If checked the original contents section will be hidden.', 'drip' ),
 				'section'     => 'original1_setting_general',
@@ -723,21 +824,25 @@ function drip_customize_register( $wp_customize ) {
 
 	// Original > heading section.
 	$wp_customize->add_section(
-		'original1_setting_heading', array(
+		'original1_setting_heading',
+		array(
 			'title'    => __( 'Heading', 'drip' ),
 			'priority' => 1,
 			'panel'    => 'original1_setting',
 		)
 	);
 	$wp_customize->add_setting(
-		'original1_heading', array(
+		'original1_heading',
+		array(
 			'default'           => 'Custom',
 			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize, 'original1_heading', array(
+			$wp_customize,
+			'original1_heading',
+			array(
 				'label'       => __( 'Original contents heading', 'drip' ),
 				'description' => __( 'Please enter heading texts for original contents section.', 'drip' ),
 				'section'     => 'original1_setting_heading',
@@ -749,21 +854,25 @@ function drip_customize_register( $wp_customize ) {
 
 	// Original > pages section.
 	$wp_customize->add_section(
-		'original1_setting_pages', array(
+		'original1_setting_pages',
+		array(
 			'title'    => __( 'Pages', 'drip' ),
 			'priority' => 1,
 			'panel'    => 'original1_setting',
 		)
 	);
 	$wp_customize->add_setting(
-		'original1_select_pages', array(
+		'original1_select_pages',
+		array(
 			'default'           => __( '0', 'drip' ),
 			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize, 'original1_select_pages', array(
+			$wp_customize,
+			'original1_select_pages',
+			array(
 				'label'       => __( 'Pages to display', 'drip' ),
 				'description' => __( 'Please select the Pages to display.', 'drip' ),
 				'section'     => 'original1_setting_pages',
@@ -778,7 +887,8 @@ function drip_customize_register( $wp_customize ) {
 	 * Contact Section
 	 */
 	$wp_customize->add_panel(
-		'contact_setting', array(
+		'contact_setting',
+		array(
 			'title'    => 'Section: Contact Setting',
 			'priority' => 170,
 		)
@@ -786,21 +896,25 @@ function drip_customize_register( $wp_customize ) {
 
 	// Contact > general section.
 	$wp_customize->add_section(
-		'contact_setting_general', array(
+		'contact_setting_general',
+		array(
 			'title'    => __( 'General', 'drip' ),
 			'priority' => 1,
 			'panel'    => 'contact_setting',
 		)
 	);
 	$wp_customize->add_setting(
-		'contact_display', array(
+		'contact_display',
+		array(
 			'default'           => false,
 			'sanitize_callback' => 'drip_sanitize_checkbox',
 		)
 	);
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize, 'contact_display', array(
+			$wp_customize,
+			'contact_display',
+			array(
 				'label'       => __( 'Hide section', 'drip' ),
 				'description' => __( 'If checked the contact section will be hidden.', 'drip' ),
 				'section'     => 'contact_setting_general',
@@ -810,14 +924,17 @@ function drip_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'contact_background_color', array(
+		'contact_background_color',
+		array(
 			'default'           => '#000',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
-			$wp_customize, 'contact_background_color', array(
+			$wp_customize,
+			'contact_background_color',
+			array(
 				'label'       => __( 'Select blackground color', 'drip' ),
 				'description' => __( 'If checked the contact section will be hidden.', 'drip' ),
 				'section'     => 'contact_setting_general',
@@ -828,21 +945,25 @@ function drip_customize_register( $wp_customize ) {
 
 	// Contact > copy section.
 	$wp_customize->add_section(
-		'contact_setting_copy', array(
+		'contact_setting_copy',
+		array(
 			'title'    => __( 'Copy', 'drip' ),
 			'priority' => 1,
 			'panel'    => 'contact_setting',
 		)
 	);
 	$wp_customize->add_setting(
-		'contact_copy', array(
+		'contact_copy',
+		array(
 			'default'           => __( 'Please do not hesitate to contact us regarding media postings and coverage etc.', 'drip' ),
 			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize, 'contact_copy', array(
+			$wp_customize,
+			'contact_copy',
+			array(
 				'label'       => __( 'Contact copy', 'drip' ),
 				'description' => __( 'Please enter the copy text.', 'drip' ),
 				'section'     => 'contact_setting_copy',
@@ -854,21 +975,25 @@ function drip_customize_register( $wp_customize ) {
 
 	// Contact > button section.
 	$wp_customize->add_section(
-		'contact_setting_button', array(
+		'contact_setting_button',
+		array(
 			'title'    => __( 'Button', 'drip' ),
 			'priority' => 1,
 			'panel'    => 'contact_setting',
 		)
 	);
 	$wp_customize->add_setting(
-		'contact_button', array(
+		'contact_button',
+		array(
 			'default'           => '/contact',
 			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize, 'contact_button', array(
+			$wp_customize,
+			'contact_button',
+			array(
 				'label'       => __( 'Posts button URL', 'drip' ),
 				'description' => __( 'Please enter the URL to set for the button.', 'drip' ),
 				'section'     => 'contact_setting_button',
@@ -878,20 +1003,24 @@ function drip_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'contact_copy', array(
+		'contact_copy',
+		array(
 			'default'           => 'More',
 			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
 	$wp_customize->add_setting(
-		'contact_button-text', array(
+		'contact_button-text',
+		array(
 			'default'           => '',
 			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize, 'contact_button-text', array(
+			$wp_customize,
+			'contact_button-text',
+			array(
 				'label'       => __( 'Posts button text', 'drip' ),
 				'description' => __( 'Please enter the text to set for the button.', 'drip' ),
 				'section'     => 'contact_setting_button',
