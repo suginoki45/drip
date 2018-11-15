@@ -1,25 +1,30 @@
 .c-button {
-  display: inline-block;
-  padding: 7px 9px;
-  color: #333;
-  font-weight: bold;
-  text-align: center;
-  border: 2px solid #333;
-  border-radius: 4px;
-  transition: 0.4s all;
-  &:hover {
-    text-decoration: none;
-  }
-  > span {
-    display: block;
-  }
-  @include mq() {
-    padding: 10px 12px;
-  }
+	display: inline-block;
+	padding: 7px 9px;
+	color: #333;
+	font-weight: 700;
+	text-align: center;
+	border: 2px solid #333;
+	border-radius: 4px;
+	transition: 0.4s all;
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	> span {
+		display: block;
+	}
+
+	@include mq() {
+		padding: 10px 12px;
+	}
 }
+
 .c-button-holder {
-  text-align: center;
-  * & {
-    margin-top: var(--space-md);
-  }
+	text-align: center;
+
+	* & {
+		margin-top: var(--space-md);
+	}
 }

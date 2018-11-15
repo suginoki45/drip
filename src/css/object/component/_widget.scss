@@ -2,11 +2,12 @@
 // Widget
 ----------------------------------------------------------------- */
 .c-widget {
-  margin-top: var(--space-md);
-  margin-bottom: var(--space-md);
-  &__title {
-    margin-bottom: var(--space-xs);
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
+	margin-top: var(--space-md);
+	margin-bottom: var(--space-md);
+
+	&__title {
+		margin-bottom: var(--space-xs);
+		font-size: 1.2rem;
+		font-weight: 700;
+	}
 }

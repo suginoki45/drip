@@ -2,19 +2,23 @@
 // Category
 ----------------------------------------------------------------- */
 .c-category {
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    @include mq(md) {
-      display: block;
-    }
-  }
-  li {
-    width: 50%;
-    padding-right: 10px;
-    @include mq(md) {
-      width: auto;
-      padding-right: 0;
-    }
-  }
+
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+
+		@include mq(md) {
+			display: block;
+		}
+	}
+
+	li {
+		width: 50%;
+		padding-right: 10px;
+
+		@include mq(md) {
+			width: auto;
+			padding-right: 0;
+		}
+	}
 }

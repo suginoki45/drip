@@ -2,118 +2,16 @@
 // Header
 ----------------------------------------------------------------- */
 .l-header {
-  position: relative;
-  width: 100%;
-  z-index: 10000;
-}
-
-/* -----------------------------------------------------------------
-// Gnavi / Toggle Menu
------------------------------------------------------------------ */
-.gnavi__item,
-.gnavi__child__item {
-  > a {
-    position: relative;
-    display: block;
-    color: #fff;
-    font-family: "Cabin", sans-serif;
-    text-decoration: none;
-    &::before {
-      position: absolute;
-      top: 50%;
-      content: "";
-      left: 5px;
-      width: 7px;
-      height: 7px;
-      margin-top: -1px;
-      border-top: 1px solid #fff;
-      border-right: 1px solid #fff;
-      transform: rotate(45deg) translateY(-50%);
-    }
-  }
-  @include mq() {
-    > a {
-      &::before {
-        content: none;
-      }
-    }
-    &:not(:first-child) {
-      border-top: none;
-    }
-  }
-}
-.gnavi__item {
-  > a {
-    padding: 14px 20px;
-  }
-  border-top: 1px solid #4e806e;
-  @include mq() {
-    position: relative;
-    display: table-cell;
-    text-align: center;
-    border-top: none;
-    &:hover {
-      > a {
-        color: #333;
-        background-color: #fff;
-      }
-    }
-    > a {
-      display: block;
-      padding: 23px 5px;
-      color: #fff;
-      &:hover {
-        color: #6184d8;
-        font-weight: bold;
-      }
-    }
-  }
-}
-.gnavi__child {
-  > li {
-    padding-left: 1em;
-  }
-  @include mq() {
-    position: absolute;
-    top: 71px;
-    left: 0;
-    display: none;
-    text-align: left;
-    background-color: #fff;
-    padding-top: 10px;
-    &.is-active {
-      display: block;
-    }
-    > li {
-      padding-left: 0;
-      font-size: 14px;
-      a {
-        display: block;
-        padding: 15px 35px;
-        color: #333;
-        white-space: nowrap;
-        &:hover {
-          color: #6184d8;
-          font-weight: bold;
-        }
-      }
-    }
-  }
-}
-.gnavi__child__item {
-  &:last-child {
-    padding-bottom: 4px;
-  }
-  > a {
-    padding: 9px 20px;
-  }
+	position: relative;
+	width: 100%;
+	z-index: 10000;
 }
 
 /* -----------------------------------------------------------------
 // Main
 ----------------------------------------------------------------- */
 .l-main {
-  margin-top: var(--space-xl);
+	margin-top: var(--space-xl);
 }
 
 /* -----------------------------------------------------------------
@@ -131,33 +29,3 @@
 /* -----------------------------------------------------------------
 // Pagetop
 ----------------------------------------------------------------- */
-#pagetop {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  z-index: 1000;
-  > a {
-    position: relative;
-    display: block;
-    width: 54px;
-    height: 54px;
-    background-color: rgba(63, 103, 89, 0.8);
-    &::before {
-      content: "";
-      position: absolute;
-      top: 45%;
-      left: 55%;
-      width: 17px;
-      height: 17px;
-      border-top: 2px solid #fff;
-      border-right: 2px solid #fff;
-      transform: rotate(-45deg) translate(-50%, -50%);
-    }
-  }
-  @include mq() {
-    > a {
-      width: 64px;
-      height: 64px;
-    }
-  }
-}

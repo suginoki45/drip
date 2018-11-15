@@ -2,100 +2,113 @@
 // Hamburger Button
 ----------------------------------------------------------------- */
 .hamburger-button {
-  display: block;
-  width: 30px;
-  height: 22px;
-  position: relative;
-  line-height: 1;
-  z-index: 10;
-  background-color: transparent;
-  cursor: pointer;
-  border-left: none;
-  border-right: none;
-  border-top: 2px solid #333;
-  border-bottom: 2px solid #333;
-  transition: all 0.2s ease-out;
-  &::before,
-  &::after {
-    position: absolute;
-    top: calc(50% - 1px);
-    left: 0;
-    content: "";
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #333;
-    transition: all 0.2s ease-out;
-  }
-  &.is-opened {
-    border: none;
-    &::before {
-      transform: rotate(45deg);
-    }
-    &::after {
-      transform: rotate(-45deg);
-    }
-  }
-  @include mq() {
-    display: none;
-  }
+	display: block;
+	width: 30px;
+	height: 22px;
+	position: relative;
+	line-height: 1;
+	z-index: 10;
+	background-color: transparent;
+	cursor: pointer;
+	border-left: none;
+	border-right: none;
+	border-top: 2px solid #333;
+	border-bottom: 2px solid #333;
+	transition: all 0.2s ease-out;
+
+	&::before,
+	&::after {
+		position: absolute;
+		top: calc(50% - 1px);
+		left: 0;
+		content: "";
+		display: block;
+		width: 100%;
+		height: 2px;
+		background-color: #333;
+		transition: all 0.2s ease-out;
+	}
+
+	&.is-opened {
+		border: none;
+
+		&::before {
+			transform: rotate(45deg);
+		}
+
+		&::after {
+			transform: rotate(-45deg);
+		}
+	}
+
+	@include mq() {
+		display: none;
+	}
 }
+
 .hamburger-button-close {
-  display: none;
-  position: absolute;
-  top: 50%;
-  right: 15px;
-  color: #333;
-  font-size: 25px;
-  transform: translateY(-50%);
-  z-index: 100;
-  > span {
-    display: inherit;
-    position: relative;
-    margin-right: 10px;
-    padding: 0;
-    width: 3px;
-    height: 24px;
-    background-color: #337ab7;
-    transform: rotate(45deg);
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: -10px;
-      width: 24px;
-      height: 3px;
-      margin-top: -2px;
-      background-color: #337ab7;
-    }
-  }
-  &.is-opened {
-    display: inline-block;
-  }
-  @include mq() {
-    display: none;
-  }
+	display: none;
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	color: #333;
+	font-size: 25px;
+	transform: translateY(-50%);
+	z-index: 100;
+
+	> span {
+		display: inherit;
+		position: relative;
+		margin-right: 10px;
+		padding: 0;
+		width: 3px;
+		height: 24px;
+		background-color: #337ab7;
+		transform: rotate(45deg);
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: -10px;
+			width: 24px;
+			height: 3px;
+			margin-top: -2px;
+			background-color: #337ab7;
+		}
+	}
+
+	&.is-opened {
+		display: inline-block;
+	}
+
+	@include mq() {
+		display: none;
+	}
 }
+
 .c-toggle-menu {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding-top: 70px;
-  opacity: 0;
-  visibility: hidden;
-  background-color: rgb(63, 103, 89);
-  transition: all 0.4s;
-  &.is-opened {
-    opacity: 1;
-    visibility: visible;
-  }
-  @include mq() {
-    position: static;
-    padding-top: 0;
-    opacity: 1;
-    visibility: visible;
-    background-color: transparent;
-    border: none;
-  }
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding-top: 70px;
+	opacity: 0;
+	visibility: hidden;
+	background-color: rgb(63, 103, 89);
+	transition: all 0.4s;
+
+	&.is-opened {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	@include mq() {
+		position: static;
+		padding-top: 0;
+		opacity: 1;
+		visibility: visible;
+		background-color: transparent;
+		border: none;
+	}
 }

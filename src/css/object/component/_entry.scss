@@ -2,128 +2,141 @@
 // Entry
 ----------------------------------------------------------------- */
 .c-entries {
-  [class*="col"] {
-    &:nth-child(odd) {
-      padding-right: 5px;
-      @include mq(sm) {
-        padding-right: 15px;
-      }
-    }
-    &:nth-child(even) {
-      padding-left: 5px;
-      @include mq(sm) {
-        padding-left: 15px;
-      }
-    }
-  }
-  &__item {
-    margin-bottom: var(--space-lg);
-    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));
-    .hentry {
-      height: 100%;
-      background-color: #fff;
-      border-radius: 0 0 10px 10px;
-    }
-    &__body {
-      padding: var(--space-sm);
-      &__title {
-        font-weight: bold;
-        color: var(--base-font-color);
-      }
-    }
-    &__info {
-      &__date {
-        color: var(--base-font-color);
-      }
-    }
-  }
+
+	[class*="col"] {
+
+		&:nth-child(odd) {
+			padding-right: 5px;
+
+			@include mq(sm) {
+				padding-right: 15px;
+			}
+		}
+
+		&:nth-child(even) {
+			padding-left: 5px;
+
+			@include mq(sm) {
+				padding-left: 15px;
+			}
+		}
+	}
+
+	&__item {
+		margin-bottom: var(--space-lg);
+		filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
+
+		.hentry {
+			height: 100%;
+			background-color: #fff;
+			border-radius: 0 0 10px 10px;
+		}
+
+		&__body {
+			padding: var(--space-sm);
+
+			&__title {
+				font-weight: 700;
+				color: var(--base-font-color);
+			}
+		}
+
+		&__info {
+
+			&__date {
+				color: var(--base-font-color);
+			}
+		}
+	}
 }
+
 .c-entry {
-  margin-top: var(--space-md);
-  margin-bottom: var(--space-md);
-  &__items {
-    &:nth-child(n + 4) {
-      margin-top: var(--space-lg);
-      background-color: var(--entry-background-color);
-    }
-  }
-  &__more {
-    margin-top: 30px;
-    font-size: 1.25rem;
-    font-weight: bold;
-    a {
-      position: relative;
-      color: var(--base-font-color);
-      &::before {
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-        display: inline-block;
-        width: 100%;
-        height: 2px;
-        background-color: #f44336;
-        content: "";
-      }
-    }
-  }
-  &__header {
-    &__term {
-      > a {
-        display: inline-block;
-        padding: 2px 8px;
-        color: var(--base-font-color);
-        font-size: 0.9rem;
-        font-weight: bold;
-        letter-spacing: 0.1em;
-        background-color: #ececec;
-      }
-    }
-    &__date {
-      margin-top: var(--space-xxxs);
-      color: #666;
-      font-size: 0.9rem;
-    }
-    &__eyecatch {
-      margin-top: var(--space-xxs);
-      img {
-        height: calc(100% / 1.732);
-      }
-    }
-  }
-  &__footer {
-    margin-top: var(--space-xl);
-  }
+	margin-top: var(--space-md);
+	margin-bottom: var(--space-md);
+
+	&__items {
+
+		&:nth-child(n + 4) {
+			margin-top: var(--space-lg);
+			background-color: var(--entry-background-color);
+		}
+	}
+
+	&__more {
+		margin-top: 30px;
+		font-size: 1.25rem;
+		font-weight: 700;
+
+		a {
+			position: relative;
+			color: var(--base-font-color);
+
+			&::before {
+				position: absolute;
+				bottom: -2px;
+				left: 0;
+				display: inline-block;
+				width: 100%;
+				height: 2px;
+				background-color: #f44336;
+				content: "";
+			}
+		}
+	}
+
+	&__header {
+
+		&__term {
+
+			> a {
+				display: inline-block;
+				padding: 2px 8px;
+				color: var(--base-font-color);
+				font-size: 0.9rem;
+				font-weight: 700;
+				letter-spacing: 0.1em;
+				background-color: #ececec;
+			}
+		}
+
+		&__date {
+			margin-top: var(--space-xxxs);
+			color: #666;
+			font-size: 0.9rem;
+		}
+
+		&__eyecatch {
+			margin-top: var(--space-xxs);
+
+			img {
+				height: calc(100% / 1.732);
+			}
+		}
+	}
+
+	&__footer {
+		margin-top: var(--space-xl);
+	}
 }
-.c-entry-summary-container {
-  [class*="col"] {
-    &:nth-child(odd) {
-      padding-right: 5px;
-      @include mq(sm) {
-        padding-right: 15px;
-      }
-    }
-    &:nth-child(even) {
-      padding-left: 5px;
-      @include mq(sm) {
-        padding-left: 15px;
-      }
-    }
-  }
-}
+
 .c-aside-box {
-  + .c-aside-box {
-    margin-top: var(--space-md);
-  }
-  &__title {
-    font-weight: bold;
-  }
+
+	+ .c-aside-box {
+		margin-top: var(--space-md);
+	}
+
+	&__title {
+		font-weight: 700;
+	}
 }
+
 .c-tag-box {
-  margin-top: var(--space-md);
+	margin-top: var(--space-md);
 }
 
 .c-category {
-  li li {
-    margin-left: 1em;
-  }
+
+	li li {
+		margin-left: 1em;
+	}
 }

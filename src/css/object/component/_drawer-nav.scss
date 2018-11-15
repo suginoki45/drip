@@ -2,27 +2,32 @@
 // Drawer Navi
 ----------------------------------------------------------------- */
 .c-drawer-nav {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: -100%;
-  overflow-y: auto;
-  z-index: 100000;
-  width: 80vw;
-  transition: left 0.2s ease-out;
-  background-color: #333;
-  &[aria-hidden="false"] {
-    left: 0;
-  }
-  @include mq(md) {
-    display: none;
-  }
-  .c-navbar {
-    &__item {
-      a {
-        padding: var(--space-md) var(--space-sm);
-        color: #fff;
-      }
-    }
-  }
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: -100%;
+	overflow-y: auto;
+	z-index: 100000;
+	width: 80vw;
+	transition: left 0.2s ease-out;
+	background-color: #333;
+
+	&[aria-hidden="false"] {
+		left: 0;
+	}
+
+	@include mq(md) {
+		display: none;
+	}
+
+	.c-navbar {
+
+		&__item {
+
+			a {
+				padding: var(--space-md) var(--space-sm);
+				color: #fff;
+			}
+		}
+	}
 }

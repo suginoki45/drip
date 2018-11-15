@@ -2,24 +2,29 @@
 // Navbar
 ----------------------------------------------------------------- */
 .c-navbar {
-  .p-global-nav & {
-    @include mq(md) {
-      display: flex;
-      justify-content: center;
-    }
-  }
-  a {
-    display: block;
-    padding: var(--space-sm);
-    color: #333;
-  }
-  &__item {
-    font-size: 0.9rem;
-    line-height: 1.2;
-  }
-  &__submenu {
-    position: absolute;
-    opacity: 0;
-    visibility: hidden;
-  }
+
+	.p-global-nav & {
+
+		@include mq(md) {
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+	a {
+		display: block;
+		padding: var(--space-sm);
+		color: #333;
+	}
+
+	&__item {
+		font-size: 0.9rem;
+		line-height: 1.2;
+	}
+
+	&__submenu {
+		position: absolute;
+		opacity: 0;
+		visibility: hidden;
+	}
 }

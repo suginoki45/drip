@@ -2,62 +2,73 @@
 //  Heading
 ----------------------------------------------------------------- */
 .c-heading {
-  margin-bottom: var(--space-lg);
-  font-weight: bold;
-  text-align: center;
-  > span {
-    display: block;
-    color: #000;
-    font-size: 3rem;
-  }
+	margin-bottom: var(--space-lg);
+	font-weight: 700;
+	text-align: center;
+
+	> span {
+		display: block;
+		color: #000;
+		font-size: 3rem;
+	}
 }
+
 .c-page-title {
-  margin-bottom: var(--space-md);
-  font-size: 2rem;
-  font-weight: bold;
+	margin-bottom: var(--space-md);
+	font-size: 2rem;
+	font-weight: 700;
 }
+
 .c-entry__header__title,
 .c-archive-title,
 h2,
 h3 {
-  font-family: var(--heading-font-family);
-  line-height: var(--heading-line-height);
+	font-family: var(--heading-font-family);
+	line-height: var(--heading-line-height);
 }
+
 .c-entry__header__title,
 .c-archive-title {
-  margin-top: var(--space-xxxs);
-  font-size: 1.4rem;
-  font-weight: bold;
-  line-height: var(--heading-line-height);
-  letter-spacing: 0.05em;
-  @include mq() {
-    font-size: 2rem;
-  }
-  a {
-    color: var(--base-font-color);
-  }
+	margin-top: var(--space-xxxs);
+	font-size: 1.4rem;
+	font-weight: 700;
+	line-height: var(--heading-line-height);
+	letter-spacing: 0.05em;
+
+	@include mq() {
+		font-size: 2rem;
+	}
+
+	a {
+		color: var(--base-font-color);
+	}
 }
+
 .c-entry__content,
 .c-comments {
-  h2 {
-    margin-top: calc(var(--space-md) * 1.5);
-    margin-bottom: calc(var(--space-md) / 1.5);
-    padding-top: var(--space-sm);
-    padding-bottom: var(--space-sm);
-    font-size: 1.25rem;
-    font-weight: bold;
-    border-top: 4px double #333;
-    border-bottom: 4px double #333;
-    @include mq() {
-      font-size: 1.5rem;
-    }
-  }
-  h3 {
-    margin-top: calc(var(--space-md) * 1.75);
-    margin-bottom: calc(var(--space-md) / 1.75);
-    font-weight: bold;
-    @include mq() {
-      font-size: 1.25rem;
-    }
-  }
+
+	h2 {
+		margin-top: calc(var(--space-md) * 1.5);
+		margin-bottom: calc(var(--space-md) / 1.5);
+		padding-top: var(--space-sm);
+		padding-bottom: var(--space-sm);
+		font-size: 1.25rem;
+		font-weight: 700;
+		border-top: 4px double #333;
+		border-bottom: 4px double #333;
+
+		@include mq() {
+			font-size: 1.5rem;
+		}
+	}
+
+	h3 {
+		margin-top: calc(var(--space-md) * 1.75);
+		margin-bottom: calc(var(--space-md) / 1.75);
+		font-weight: 700;
+
+		@include mq() {
+			font-size: 1.25rem;
+		}
+	}
 }
