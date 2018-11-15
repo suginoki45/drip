@@ -20,12 +20,7 @@
     "browser-sync": "^2.23.6",
     "del": "^3.0.0",
     "eslint": "^5.4.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-config-prettier": "^3.0.1",
     "eslint-config-wordpress": "^2.0.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-prettier": "^2.6.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-babel": "^7.0.1",
@@ -47,9 +42,10 @@
     "imagemin-jpeg-recompress": "^5.1.0",
     "imagemin-pngquant": "^6.0.0",
     "minimist": "^1.2.0",
-    "prettier": "^1.10.2",
-    "prettier-eslint": "^8.8.2",
-    "prettier-eslint-cli": "^4.7.1",
-    "run-sequence": "^2.2.1"
+    "run-sequence": "^2.2.1",
+    "stylelint": "^9.8.0",
+    "stylelint-config-recommended-scss": "^3.2.0",
+    "stylelint-config-wordpress": "^13.1.0",
+    "stylelint-scss": "^3.4.0"
   }
 }
