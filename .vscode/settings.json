@@ -6,7 +6,7 @@
     "editor.formatOnSave": true
   },
   "[scss]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": true
   },
   "[javascript]": {
     "editor.formatOnSave": true
@@ -15,10 +15,10 @@
     "editor.formatOnSave": false,
     "editor.tabSize": 4
 	},
-	// prettierでeslintを使用できるようにする
-	"prettier.eslintIntegration": true,
 	// prettierとぶつかり合うのでデフォルトの整形は無効にする
 	"javascript.format.enable": false,
+	// prettierでeslintを使用できるようにする
+	"prettier.eslintIntegration": true,
 	// phpcsの設定
 	"phpcs.standard": "./phpcs.xml",
 	// phpcbfの設定
